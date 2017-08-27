@@ -7,16 +7,10 @@ calc = require 'postcss-calc'
 config =
     exec: 
         'harp': 'harp compile'
-    teststage: 'psi stage.dominiclooser.ch'
     'gh-pages':
-        production:
+        main:
             options:
                 base: 'www'
-            src: '**/*'
-        stage:
-            options:
-                base: 'www'
-                repo: 'git@github.com:dominiclooser/dominiclooser.ch-stage.git'
             src: '**/*'
     postcss:
         options:
@@ -25,15 +19,9 @@ config =
             src: 'www/styles/styles.css'
     copy:
         main:
-            src: ['images/*.*', 'scripts/*.js']
+            src: ['CNAME', 'images/*.*', 'scripts/*.js']
             expand: true
             dest: 'www/'  
-        'production-cname':
-            src: '_production-cname'
-            dest: 'www/CNAME'
-        'stage-cname':
-            src: '_stage-cname'
-            dest: 'www/CNAME'
     coffee:
         main:
             expand: true
@@ -67,6 +55,4 @@ module.exports = (grunt) ->
     jit grunt
     grunt.registerTask 'default', ['yaml', 'watch']
     grunt.registerTask 'compile', ['yaml','force:on', 'exec:harp','force:off', 'copy', 'stylus', 'postcss', 'coffee']
-    grunt.registerTask 'deploy', ['compile','copy:production-cname', 'gh-pages:production']
-    grunt.registerTask 'stage', ['compile','copy:stage-cname', 'gh-pages:stage']
-    grunt.registerTask 'teststage', ['exec:teststage']
+    grunt.registerTask 'deploy', ['compile','gh-pages']

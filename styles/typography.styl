@@ -1,7 +1,7 @@
 :root
     --m: var(--font-size)
-    --xs: calc(var(--s) / var(--scale-factor))
     --s: calc(var(--m) / var(--scale-factor))
+    --xs: calc(var(--s) / var(--scale-factor))
     --l: calc(var(--scale-factor) * var(--m))
     --xl: calc(var(--scale-factor) * var(--l))
     --xxl: calc(var(--scale-factor) * var(--xl))
@@ -15,14 +15,13 @@ body
     font-family: body-font
     line-height: var(--line-height)
     text-rendering: geometricPrecision
-    // font-weight: 900
+
 
 h1, h2, h3, h4
     font-family: header-font
 
 h1
     font-size: var(--xl)
-    font-weight: bold
     line-height: header-line-height
 
 h2 
@@ -33,6 +32,9 @@ h2
 h3
     font-size: var(--m)
     line-height: header-line-height
+
+// p
+    // font-weight: 500
 
 a
     color: inherit

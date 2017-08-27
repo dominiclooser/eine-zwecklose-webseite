@@ -1,18 +1,17 @@
 .page-header
-    padding: calc(1*var(--unit)) 0
+    padding: var(--unit) 0 var(--unit) 0
     h1
         text-transform: uppercase
         font-style: italic
         font-size: var(--m)
         display: inline
+        font-weight: bold
         border-bottom: 3px solid dark    
 
 main
     img     
         width: 100%
         margin-bottom: var(--unit)
-    p
-        font-style: italic
 
 main > section, article
     margin-bottom: var(--unit)
@@ -24,29 +23,36 @@ main > section, article
     margin-top: var(--unit)
     h2
         font-weight: normal
-        font-style: italic
+        // font-style: italic
         font-family: body-font
         font-size: var(--m)
-        margin-bottom: var(--unit)
-        .title
-            text-transform: uppercase
+        margin-bottom: var(--semi-unit)
+        text-transform: uppercase
+
     p
         font-family: header-font
+        font-style: italic
         font-size: 80px
         font-weight: bold
         text-transform: uppercase
-        line-height: 1
+        line-height: 1.1
 
 #pandas-pasta
     margin-top: var(--unit)
+    header
+        margin-bottom: var(--semi-unit)
     h2
         font-style: italic
-        margin-bottom: var(--semi-unit)
+        text-transform: uppercase
+        border-bottom: 2px solid dark
+        display: inline
+        
     section 
         margin-bottom: calc(0.5*var(--semi-unit))
 
 footer
     border-top: 1px solid dark
-    padding-top: var(--unit)
+    padding-top: var(--semi-unit)
     font-family: header-font
     margin-bottom: var(--unit)
+    font-size: var(--s)
