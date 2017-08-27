@@ -1,7 +1,7 @@
 :root
+    --m: var(--font-size)
     --xs: calc(var(--s) / var(--scale-factor))
     --s: calc(var(--m) / var(--scale-factor))
-    --m: var(--font-size)
     --l: calc(var(--scale-factor) * var(--m))
     --xl: calc(var(--scale-factor) * var(--l))
     --xxl: calc(var(--scale-factor) * var(--xl))
@@ -26,16 +26,13 @@ h1
     line-height: header-line-height
 
 h2 
-    font-size: var(--l)
+    font-size: var(--m)
     line-height: header-line-height
-    font-weight: bold
+
 
 h3
     font-size: var(--m)
     line-height: header-line-height
-
-p
-    hyphens: auto
 
 a
     color: inherit

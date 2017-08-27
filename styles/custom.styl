@@ -2,8 +2,11 @@
     padding: calc(1*var(--unit)) 0
     h1
         text-transform: uppercase
-        font-size: 30px
-    
+        font-style: italic
+        font-size: var(--m)
+        display: inline
+        border-bottom: 3px solid dark    
+
 main
     img     
         width: 100%
@@ -11,22 +14,39 @@ main
     p
         font-style: italic
 
-.text
-    @extends .indented-paragraphs
+main > section, article
     margin-bottom: var(--unit)
 
-.essenz
-    margin-bottom: var(--unit)
+#intro
+    @extends .indented-paragraphs
+
+#essenz-des-lebens
+    margin-top: var(--unit)
     h2
         font-weight: normal
         font-style: italic
         font-family: body-font
         font-size: var(--m)
         margin-bottom: var(--unit)
+        .title
+            text-transform: uppercase
     p
         font-family: header-font
         font-size: 80px
         font-weight: bold
         text-transform: uppercase
         line-height: 1
-    
+
+#pandas-pasta
+    margin-top: var(--unit)
+    h2
+        font-style: italic
+        margin-bottom: var(--semi-unit)
+    section 
+        margin-bottom: calc(0.5*var(--semi-unit))
+
+footer
+    border-top: 1px solid dark
+    padding-top: var(--unit)
+    font-family: header-font
+    margin-bottom: var(--unit)

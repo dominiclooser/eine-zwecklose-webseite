@@ -1,19 +1,30 @@
 {
-  "name": "zwecklos",
+  "name": "portfolio-harp",
   "version": "0.1.0",
   "devDependencies": {
+    "autoprefixer": "latest",
     "grunt": "latest",
-    "jit-grunt": "latest",
-    "matchdep": "latest",
-    "time-grunt": "latest",
+    "grunt-contrib-coffee": "^1.0.0",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-stylus": "^1.2.0",
     "grunt-contrib-watch": "latest",
+    "grunt-exec": "^3.0.0",
+    "grunt-force": "^1.0.0",
     "grunt-gh-pages": "latest",
     "grunt-postcss": "latest",
+    "grunt-preprocess": "^5.1.0",
     "grunt-yaml": "latest",
-    "autoprefixer": "latest"
+    "jit-grunt": "latest",
+    "matchdep": "latest",
+    "postcss-calc": "^5.3.1",
+    "postcss-css-variables": "^0.6.0",
+    "time-grunt": "latest"
   },
   "scripts": {
-    "deploy": "harp compile; grunt finish; grunt gh-pages",
-    "test": "url=tsnuk.me; psi $url"
+    "test": "psi dominiclooser.ch"
+  },
+  "dependencies": {
+    "imagesloaded": "^4.1.1",
+    "svg.js": "^2.4.0"
   }
 }
