@@ -1,11 +1,16 @@
 extends _base
 
+block scripts
+   script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=", crossorigin="anonymous")
+   script(src='main.js')
+
 block content
-   .container
+   .wrapper
       main
-         img(src='images/beatles.gif')
-         section#intro
-            p Diese Seite ist zwecklos. Ihr einziger Zweck ist es, der Zwecklosigkeit zu huldigen.
+         article#intro
+            p. 
+               Diese Seite ist zwecklos. Ihr einziger Zweck ist es, der Zwecklosigkeit zu 
+               <button id='huldigen' class='text-button'>huldigen</button>.
             p.
                Gut, genau genommen ist sie deshalb nicht mehr zwecklos.
                Aber dieses Huldigen ist erst der zweite Schritt.
@@ -13,16 +18,25 @@ block content
                Und diese Idee war rein, also zwecklos. 
                Der Zweck kam erst später hinzu. 
                Und dieser Zweck, das Huldigen der Zwecklosigkeit, ist ein sehr zweckarmer Zweck. 
-            p Deswegen ist diese Seite – zumindest beinahe – zwecklos. 
-         img(src='images/penguins.gif')
-         article#essenz-des-lebens
-            h2 
-               span.title Die Essenz des Lebens
-               //- a(href='http://dominiclooser.ch/text/die-essenz-des-lebens') -> 
-               br
-               span.subtitle Teil Neun – Zweck
-            p Der Zweck tötet die Mittel
-         img(src='images/asian.gif')
+            p Deswegen ist diese Seite – zumindest beinahe – zwecklos.  
+         section#die-essenz-des-lebens  
+            article
+               p Der Zweck tötet die Mittel
+               span aus 
+               cite
+                  a(href='http://dominiclooser.ch/text/die-essenz-des-lebens') Die Essenz des Lebens
+         section#more
+            h2 Freiwillige Zwecklosigkeiten
+            ul.stacked-list
+               li: a(href='http://die-goldenen-zitronen.de') Die Goldenen Zitronen
+               li: a(href='http://weirdorconfusing.com') Weird Or Confusing
+               li: a(href='http://diekrassetasse.com') Die Krasse Tasse
+               li: a(href='http://peterlicht.de') PeterLicht
+               li: a(href='http://www.theuselessweb.com') The Useless Web
+               li: a(href='http://einezwecklosewebseite.ch') Eine Zwecklose Webseite
+               li: a(href='https://www.amazon.com/Spikenzielabs-1102-The-Useless-Machine/dp/B00OCXJMS2') The Useless Machine
+         section#button-section
+            button#neon-shizzle-button Touch Me, My Dear! 
          article#pandas-pasta
             header
                h2 Pandas Pasta
@@ -33,17 +47,33 @@ block content
             section  
                p Jung freute sich
                p Freud liebte seine Mutter nicht
+            section
                p Das Nichts war leer 
                p Der Fisch noch frisch
                p Die Qualle qualmte immer noch
             section
                p Und der Panda machte Pasta
-         footer
+         section#activities
+            h2 Tätigkeiten sortiert nach Zwecklosigkeit
+            ol
+               li Dadaismus
+               li Poetry Slam
+               li Theoretische Mathematik
+               li Architektur
+               li Medizin
+         section
+            h2 Unfreiwillige Zwecklosigkeiten
+            ul
+               li Sharknado
+               li Sex und Rösti
+         
+         footer.spaced-paragraphs
             p.
                Made without Zweck by <a href='http://dominiclooser.ch'>Dominic Looser</a>. 
                Weitere Zwecklosigkeiten unter 
-               <a href='http://tsnuk.me'>tsnuk.me</a> (T-Shirts) und
-               <a href='http://diekrassetasse.com'>diekrassetasse.com</a> (krasse Tassen).  
-
-
-
+               <a href='http://diekrassetasse.com'>diekrassetasse.com</a> und <a href='http://einezwecklosewebseite.ch'>einezwecklosewebseite.ch</a>. 
+            
+         #neon-shizzle
+            button#close-neon-shizzle X
+            p Zweckloser <br> Neon <br> Shizzle
+         

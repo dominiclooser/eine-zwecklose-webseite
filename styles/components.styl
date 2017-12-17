@@ -1,22 +1,30 @@
 .button
-    border: border
+    display: inline-block
+    width: 100px
+    height: 100px
+    // border: border
     color: button-color
-    border-radius: 2em
+    border-radius: 50%
     cursor: pointer
     text-transform: uppercase
     padding: 0.5em 1em
+    background-color: dark
     &:hover
-        background-color: button-color
+        background-color:  #FE504E
         color: white
 
 .hidden
     display: none
 
-.equal-columns 
+.two-columns 
     @media two-columns
         display: flex
         .column
-            flex: 1
+            width: 50%
+        .column:first-child
+            padding-right: var(--semi-unit)
+        .column:nth-child(2)
+            padding-left: var(--semi-unit)
 
 .text-plus
     @media text-plus
@@ -24,7 +32,7 @@
 
 .text-plus-text
     margin: var(--unit) 0 0 0
-    @media textplus
+    @media text-plus
         margin: 0 var(--unit) 0 0
 
 .text-plus-plus
@@ -62,12 +70,6 @@
 .stacked-list
     list-style: none
     padding: 0
-    li  
-        padding: calc(0.5 * var(--unit)) 0 
-        padding-left: 10px
-        border-bottom: 1px solid softBorderColor
-    li:first-child
-        border-top: 1px solid softBorderColor
 
 .separated-list
     list-style: none
@@ -92,9 +94,8 @@
             content: '\A'
             white-space: pre
 
-.container
-    margin: 0 auto
-    padding: 0 20px
+.wrapper
+    padding: 0 var(--padding)
     max-width: max-page-width
 
 .text-container
@@ -104,7 +105,7 @@
 
 .spaced-paragraphs
     p+p
-        margin-top: var(--unit) 
+        margin-top: var(--semi-unit) 
 
 .indented-paragraphs
     p+p
