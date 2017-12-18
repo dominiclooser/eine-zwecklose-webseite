@@ -1,16 +1,7 @@
-// @media two-columns
-//     #intro
-//         display: flex
-//         picture
-//             width: 33%
-//         article
-//             width: 66%
-//     #die-essenz-des-lebens
-//         display: flex
-//         picture
-//             width: 33%
-//         article
-//             width: 66%
+html
+    animation-name: change-background-color
+    animation-duration: 3s
+    animation-iteration-count: infinite
 
 .page-header
     padding: var(--semi-unit) 0 var(--unit) 0
@@ -24,10 +15,6 @@
         border-bottom: 3px solid dark
     z-index: -1
         
-@keyframes turn
-    100% 
-        transform: rotate(180deg)
-
 main
     img     
         width: 100%
@@ -74,8 +61,7 @@ main > section, article
 
 #button-section
     text-align: center
-    padding: var(--double-unit) 0
-    margin: calc(1*var(--double-unit)) 0
+    margin: var(--double-unit) 0
 
 #neon-shizzle
     background-color: #010a00
@@ -143,15 +129,13 @@ a
     border-radius: 50%
     cursor: pointer
     padding: 0.5em 1em
-    background-color: #FE504E
+    background-color: primary-color
     color: white
     font-family: body-font
     font-size: var(--l) 
     font-style: italic
     border: none
     box-shadow: 5px 5px 1px 1px rgba(0,0,0,0.7)
-    &:hover
-        background-color: dark
 
 .text-button
     font-family: inherit

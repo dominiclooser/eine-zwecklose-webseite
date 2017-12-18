@@ -5,12 +5,18 @@ cssVariables = require 'postcss-css-variables'
 calc = require 'postcss-calc'
 
 config =
-    exec: 
-        'harp': 'harp compile'
+    teststage: 'psi todo2'
+    exec:
+        harp: 'harp compile'
     'gh-pages':
-        main:
+        production:
             options:
                 base: 'www'
+            src: '**/*'
+        stage:
+            options:
+                base: 'www'
+                repo: 'todo'
             src: '**/*'
     postcss:
         options:
@@ -19,9 +25,15 @@ config =
             src: 'www/styles/styles.css'
     copy:
         main:
-            src: ['CNAME', 'images/*.*', 'scripts/*.js']
+            src: ['images/**/*', 'scripts/*.js', 'favicon.ico']
             expand: true
             dest: 'www/'  
+        'production-cname':
+            src: '_cname-production'
+            dest: 'www/CNAME'
+        'stage-cname':
+            src: '_cname-stage'
+            dest: 'www/CNAME'
     coffee:
         main:
             expand: true
@@ -29,7 +41,6 @@ config =
             ext: '.js'
             src: 'scripts/*.coffee'
             dest: 'www/scripts/'
-     
     stylus:
         main:
             src: 'styles/styles.styl'
@@ -55,4 +66,6 @@ module.exports = (grunt) ->
     jit grunt
     grunt.registerTask 'default', ['yaml', 'watch']
     grunt.registerTask 'compile', ['yaml','force:on', 'exec:harp','force:off', 'copy', 'stylus', 'postcss', 'coffee']
-    grunt.registerTask 'deploy', ['compile','gh-pages']
+    grunt.registerTask 'deploy', ['compile','copy:production-cname', 'gh-pages:production']
+    grunt.registerTask 'stage', ['compile','copy:stage-cname', 'gh-pages:stage']
+    grunt.registerTask 'teststage', ['exec:teststage']

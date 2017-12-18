@@ -7,10 +7,11 @@ block scripts
 block content
    .wrapper
       main
+         img(src='images/penguins.gif')
          article#intro
             p. 
                Diese Seite ist zwecklos. Ihr einziger Zweck ist es, der Zwecklosigkeit zu 
-               <button id='huldigen' class='text-button'>huldigen</button>.
+               huldigen.
             p.
                Gut, genau genommen ist sie deshalb nicht mehr zwecklos.
                Aber dieses Huldigen ist erst der zweite Schritt.
@@ -19,12 +20,8 @@ block content
                Der Zweck kam erst später hinzu. 
                Und dieser Zweck, das Huldigen der Zwecklosigkeit, ist ein sehr zweckarmer Zweck. 
             p Deswegen ist diese Seite – zumindest beinahe – zwecklos.  
-         section#die-essenz-des-lebens  
-            article
-               p Der Zweck tötet die Mittel
-               span aus 
-               cite
-                  a(href='http://dominiclooser.ch/text/die-essenz-des-lebens') Die Essenz des Lebens
+         section#button-section
+            button#neon-shizzle-button Zweckloser Button 
          section#more
             h2 Freiwillige Zwecklosigkeiten
             ul.stacked-list
@@ -35,8 +32,7 @@ block content
                li: a(href='http://www.theuselessweb.com') The Useless Web
                li: a(href='http://einezwecklosewebseite.ch') Eine Zwecklose Webseite
                li: a(href='https://www.amazon.com/Spikenzielabs-1102-The-Useless-Machine/dp/B00OCXJMS2') The Useless Machine
-         section#button-section
-            button#neon-shizzle-button Touch Me, My Dear! 
+         img(src='images/asian.gif')
          article#pandas-pasta
             header
                h2 Pandas Pasta
@@ -53,6 +49,13 @@ block content
                p Die Qualle qualmte immer noch
             section
                p Und der Panda machte Pasta
+         section#die-essenz-des-lebens  
+            article
+               p Der Zweck tötet die Mittel
+               span aus 
+               cite
+                  a(href='http://dominiclooser.ch/text/die-essenz-des-lebens') Die Essenz des Lebens   
+         img(src='images/beatles.gif')
          section#activities
             h2 Tätigkeiten sortiert nach Zwecklosigkeit
             ol
@@ -61,11 +64,11 @@ block content
                li Theoretische Mathematik
                li Architektur
                li Medizin
-         section
-            h2 Unfreiwillige Zwecklosigkeiten
-            ul
-               li Sharknado
-               li Sex und Rösti
+         //- section
+         //-    h2 Unfreiwillige Zwecklosigkeiten
+         //-    ul
+         //-       li Sharknado
+         //-       li Sex und Rösti
          
          footer.spaced-paragraphs
             p.
