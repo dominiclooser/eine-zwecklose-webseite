@@ -1,21 +1,24 @@
-html
-    animation-name: change-background-color
-    animation-duration: 3s
-    animation-iteration-count: infinite
+// html
+//     animation-name: change-background-color
+//     animation-duration: 10s
+//     animation-iteration-count: infinite
 
 .page-header
     padding: var(--semi-unit) 0 var(--unit) 0
-    h1
-        text-transform: uppercase
-        font-style: italic
-        font-size: var(--xxl)
-        line-height: 1.3
-        display: inline
-        font-weight: bold
-        border-bottom: 3px solid dark
     z-index: -1
-        
+    margin-top: var(--two-units)
+
+h1
+    text-transform: uppercase
+    font-style: italic
+    font-size: var(--xxl)
+    display: inline
+    font-weight: bold
+    span
+        color: primary-color
+
 main
+    margin-top: var(--unit)
     img     
         width: 100%
         margin-bottom: var(--unit)
@@ -60,8 +63,9 @@ main > section, article
         margin-bottom: calc(0.5*var(--semi-unit))
 
 #button-section
-    text-align: center
-    margin: var(--double-unit) 0
+    display: flex
+    justify-content: space-around
+    margin: var(--two-units) 0
 
 #neon-shizzle
     background-color: #010a00
@@ -122,20 +126,22 @@ footer
 a
     @extends .clickable
 
-#neon-shizzle-button
+.fancy-button
     display: inline-block
-    width: 200px
-    height: 200px
+    width: var(--four-units)
+    height: @width
     border-radius: 50%
     cursor: pointer
     padding: 0.5em 1em
     background-color: primary-color
     color: white
     font-family: body-font
-    font-size: var(--l) 
+    font-size: var(--m) 
     font-style: italic
     border: none
     box-shadow: 5px 5px 1px 1px rgba(0,0,0,0.7)
+    &:first-child
+        background-color: secondary-color
 
 .text-button
     font-family: inherit

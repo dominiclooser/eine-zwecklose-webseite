@@ -2,10 +2,12 @@ extends _base
 
 block scripts
    script(src="https://code.jquery.com/jquery-3.2.1.slim.min.js", integrity="sha256-k2WSCIexGzOj3Euiig+TlR8gA0EmPjuc79OEeY5L45g=", crossorigin="anonymous")
-   script(src='main.js')
+   script(src='scripts/main.js')
 
 block content
    .wrapper
+      header.page-header
+         h1 Eine<br>zwecklose<br>Webseite
       main
          img(src='images/penguins.gif')
          article#intro
@@ -21,7 +23,8 @@ block content
                Und dieser Zweck, das Huldigen der Zwecklosigkeit, ist ein sehr zweckarmer Zweck. 
             p Deswegen ist diese Seite – zumindest beinahe – zwecklos.  
          section#button-section
-            button#neon-shizzle-button Zweckloser Button 
+            button.fancy-button#neon-shizzle-button ziemlich zweckloser Button 
+            button.fancy-button gänzlich zweckloser Button
          section#more
             h2 Freiwillige Zwecklosigkeiten
             ul.stacked-list
@@ -64,19 +67,18 @@ block content
                li Theoretische Mathematik
                li Architektur
                li Medizin
-         //- section
-         //-    h2 Unfreiwillige Zwecklosigkeiten
-         //-    ul
-         //-       li Sharknado
-         //-       li Sex und Rösti
-         
          footer.spaced-paragraphs
             p.
                Made without Zweck by <a href='http://dominiclooser.ch'>Dominic Looser</a>. 
                Weitere Zwecklosigkeiten unter 
-               <a href='http://diekrassetasse.com'>diekrassetasse.com</a> und <a href='http://einezwecklosewebseite.ch'>einezwecklosewebseite.ch</a>. 
-            
+               <br><a href='http://diekrassetasse.com'>diekrassetasse.com</a> und <br> <a href='http://einezwecklosewebseite.ch'>einezwecklosewebseite.ch</a>. 
          #neon-shizzle
             button#close-neon-shizzle X
-            p Zweckloser <br> Neon <br> Shizzle
+            p Zweckloser <br> Neonshizzle
+
+//- section
+         //-    h2 Unfreiwillige Zwecklosigkeiten
+         //-    ul
+         //-       li Sharknado
+         //-       li Sex und Rösti
          
