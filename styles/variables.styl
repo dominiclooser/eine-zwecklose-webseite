@@ -4,16 +4,17 @@ two-columns = '(min-width: 600px)'
 text-plus = two-columns
 
 // typography
-body-font = Vollkorn, serif
-header-font = Vollkorn, serif
+body-font = 'EB Garamond'
+header-font = 'EB Garamond'
+number-font = 'Space Mono'
 header-line-height = 1
 text-width = 800px
 :root
     --line-height: 1.45
     --scale-factor: 1.3
-    --font-size: 20px
+    --font-size: 22px
     @media big-text
-        --font-size: 25px
+        --font-size: 28px
     --unit: calc(var(--line-height) * var(--font-size))
     --semi-unit: calc(0.5*var(--unit))
     --two-units: calc(2*var(--unit))
@@ -25,8 +26,8 @@ text-width = 800px
 dark = rgba(0,0,0,0.87)
 light-grey = #f7f7f7
 middle-grey = #e8e6e6
-primary-color =   #FE504E
-secondary-color = #3F88C5
+primary-color =  #DE3107
+
 
 text-color = dark
 background-color = white 
@@ -38,4 +39,4 @@ footer-background-color = inherit
 
 // misc
 border = 1px solid text-color
-max-page-width = 500px
+max-page-width = 1000px

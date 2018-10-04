@@ -3,44 +3,36 @@
 //     animation-duration: 10s
 //     animation-iteration-count: infinite
 
+
 .page-header
-    padding: var(--semi-unit) 0 var(--unit) 0
-    z-index: -1
-    margin-top: var(--two-units)
+    padding-top: var(--two-units)
+    padding-bottom: var(--two-units)
+    background-image: url('/images/crazy.jpg')
+    text-align: center
 
-h1
-    text-transform: uppercase
+.page-title
+    font-size: var(--l)
     font-style: italic
-    font-size: var(--xxl)
+    // background: rgba(256, 256, 256, 0.9)
+    background: primary-color
+    padding: 5px 8px
     display: inline
-    font-weight: bold
-    span
-        color: primary-color
+    color: white
+    transform: rotate(13deg)
 
+    
 main
-    margin-top: var(--unit)
     img     
         width: 100%
         margin-bottom: var(--unit)
 
-main > section, article
-    margin-bottom: var(--unit)
+section, article, sequence-animation
+    padding: var(--two-units) 0
 
 #intro
-    font-style: italic
     @extends .spaced-paragraphs
 
-#die-essenz-des-lebens
-    order: -1
-    margin-top: var(--unit)
-    h2
-        font-weight: normal
-        // font-style: italic
-        font-family: body-font
-        font-size: var(--m)
-        margin-bottom: var(--semi-unit)
-        text-transform: uppercase
-
+#essenz
     p
         font-family: header-font
         font-style: italic
@@ -50,7 +42,6 @@ main > section, article
         line-height: 1.1
 
 #pandas-pasta
-    margin-top: var(--unit)
     header
         margin-bottom: var(--semi-unit)
     h2
@@ -59,13 +50,32 @@ main > section, article
         border-bottom: 2px solid dark
         display: inline
         
-    section 
+        
+    p
         margin-bottom: calc(0.5*var(--semi-unit))
 
-#button-section
+.button-section
+    background-color: primary-color
     display: flex
-    justify-content: space-around
-    margin: var(--two-units) 0
+    justify-content: center
+    align-items: center
+
+.fancy-button
+    display: inline-block
+    width: calc(2*var(--four-units))
+    height: @width
+    border-radius: 50%
+    cursor: pointer
+    padding: 0.5em 1em
+    color: primary-color
+    font-family: body-font
+    font-size: var(--xl) 
+    font-style: italic
+    border: none
+    box-shadow: 5px 5px 1px 1px rgba(0,0,0,0.7)
+    background-color: secondary-color
+    &:focus
+        outline: none
 
 #neon-shizzle
     background-color: #010a00
@@ -126,22 +136,7 @@ footer
 a
     @extends .clickable
 
-.fancy-button
-    display: inline-block
-    width: var(--four-units)
-    height: @width
-    border-radius: 50%
-    cursor: pointer
-    padding: 0.5em 1em
-    background-color: primary-color
-    color: white
-    font-family: body-font
-    font-size: var(--m) 
-    font-style: italic
-    border: none
-    box-shadow: 5px 5px 1px 1px rgba(0,0,0,0.7)
-    &:first-child
-        background-color: secondary-color
+
 
 .text-button
     font-family: inherit
@@ -157,3 +152,13 @@ a
         cursor: pointer
         background: dark
         color: white
+
+sequence-animation
+    font-family: number-font
+    color: white
+    display: flex
+    align-items: center
+    justify-content: center
+    font-size: var(--xxxxxl)
+    padding: var(--two-units)
+    background: url('/images/orange.png')
