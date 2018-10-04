@@ -2,11 +2,9 @@
   var activate;
 
   activate = function() {
-    $('#huldigen').click(function() {
-      var degree;
-      degree = Math.random() * 360;
-      return $('.page-header').css('transform', 'rotate(' + degree + 'deg)');
-    });
+    // $('#huldigen').click ->
+    //     degree = Math.random() * 360
+    //     $('.page-header').css('transform', 'rotate(' + degree + 'deg)')
     $('#neon-shizzle-button').click(function() {
       return $('#neon-shizzle').css('display', 'flex');
     });
