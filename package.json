@@ -2,7 +2,7 @@
   "name": "portfolio-harp",
   "version": "0.1.0",
   "devDependencies": {
-    "autoprefixer": "^9.1.5",
+    "autoprefixer": "^9.3.1",
     "grunt": "^1.0.3",
     "grunt-contrib-coffee": "latest",
     "grunt-contrib-copy": "^1.0.0",
@@ -10,7 +10,7 @@
     "grunt-contrib-watch": "^1.1.0",
     "grunt-exec": "^3.0.0",
     "grunt-force": "^1.0.0",
-    "grunt-gh-pages": "latest",
+    "grunt-gh-pages": "^3.1.0",
     "grunt-postcss": "^0.9.0",
     "grunt-preprocess": "^5.1.0",
     "grunt-yaml": "latest",
@@ -18,15 +18,12 @@
     "matchdep": "latest",
     "postcss-calc": "^5.3.1",
     "postcss-css-variables": "^0.6.0",
-    "time-grunt": "latest"
-  },
-  "scripts": {
-    "test": "psi dominiclooser.ch"
+    "time-grunt": "^2.0.0"
   },
   "dependencies": {
-    "@webcomponents/webcomponentsjs": "^2.1.3",
+    "@webcomponents/webcomponentsjs": "^2.2.0",
     "fittext.js": "^1.2.0",
     "imagesloaded": "^4.1.1",
-    "svg.js": "^2.4.0"
+    "svg.js": "^2.7.0"
   }
 }
